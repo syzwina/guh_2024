@@ -1,0 +1,100 @@
+{
+    "type_of_model": "SSD",
+    "converter_type": "DETECTION",
+    "model_parameters": {
+        "result_based_confidence_threshold": true,
+        "confidence_threshold": 0.2750000059604645,
+        "nms_iou_threshold": 0.5,
+        "max_num_detections": 0,
+        "use_ellipse_shapes": false,
+        "labels": {
+            "label_tree": {
+                "type": "tree",
+                "directed": true,
+                "nodes": [
+                    "672f671cf838622aa2534ab4",
+                    "672f671cf838622aa2534abe"
+                ],
+                "edges": []
+            },
+            "label_groups": [
+                {
+                    "_id": "672f8e9305d214ecae58d453",
+                    "name": "Detection labels",
+                    "label_ids": [
+                        "672f671cf838622aa2534ab4"
+                    ],
+                    "relation_type": "EXCLUSIVE"
+                },
+                {
+                    "_id": "672f8e9305d214ecae58d454",
+                    "name": "No object",
+                    "label_ids": [
+                        "672f671cf838622aa2534abe"
+                    ],
+                    "relation_type": "EMPTY_LABEL"
+                }
+            ],
+            "all_labels": {
+                "672f671cf838622aa2534ab4": {
+                    "_id": "672f671cf838622aa2534ab4",
+                    "name": "object",
+                    "color": {
+                        "red": 237,
+                        "green": 178,
+                        "blue": 0,
+                        "alpha": 255
+                    },
+                    "hotkey": "",
+                    "domain": "DETECTION",
+                    "creation_date": "2024-11-09T16:32:19.869000",
+                    "is_empty": false,
+                    "is_anomalous": false
+                },
+                "672f671cf838622aa2534abe": {
+                    "_id": "672f671cf838622aa2534abe",
+                    "name": "No object",
+                    "color": {
+                        "red": 0,
+                        "green": 0,
+                        "blue": 0,
+                        "alpha": 255
+                    },
+                    "hotkey": "",
+                    "domain": "DETECTION",
+                    "creation_date": "2024-11-09T16:32:19.869000",
+                    "is_empty": true,
+                    "is_anomalous": false
+                }
+            }
+        }
+    },
+    "tiling_parameters": {
+        "visible_in_ui": true,
+        "type": "PARAMETER_GROUP",
+        "enable_tiling": false,
+        "enable_tile_classifier": false,
+        "enable_adaptive_params": true,
+        "tile_size": 400,
+        "tile_overlap": 0.2,
+        "tile_max_number": 1500,
+        "tile_ir_scale_factor": 1.0,
+        "tile_sampling_ratio": 1.0,
+        "object_tile_ratio": 0.03,
+        "header": "Tiling Parameters",
+        "description": "Tiling Parameters",
+        "_ParameterGroup__metadata_overrides": {},
+        "groups": [],
+        "parameters": [
+            "enable_adaptive_params",
+            "enable_tile_classifier",
+            "enable_tiling",
+            "object_tile_ratio",
+            "tile_ir_scale_factor",
+            "tile_max_number",
+            "tile_overlap",
+            "tile_sampling_ratio",
+            "tile_size"
+        ]
+    }
+}

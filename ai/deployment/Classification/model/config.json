@@ -1,0 +1,108 @@
+{
+    "type_of_model": "Classification",
+    "converter_type": "CLASSIFICATION",
+    "model_parameters": {
+        "labels": {
+            "label_tree": {
+                "type": "tree",
+                "directed": true,
+                "nodes": [
+                    "672f671cf838622aa2534ab7",
+                    "672f671cf838622aa2534ab8",
+                    "672f671cf838622aa2534ac3",
+                    "672f8244f838622aa2534b41"
+                ],
+                "edges": []
+            },
+            "label_groups": [
+                {
+                    "_id": "672fa7dd0e5f315f0e8c0a4d",
+                    "name": "Detection labels___obstructions",
+                    "label_ids": [
+                        "672f671cf838622aa2534ab7",
+                        "672f8244f838622aa2534b41"
+                    ],
+                    "relation_type": "EXCLUSIVE"
+                },
+                {
+                    "_id": "672fa7dd0e5f315f0e8c0a4e",
+                    "name": "Detection labels___obstacles",
+                    "label_ids": [
+                        "672f671cf838622aa2534ab8"
+                    ],
+                    "relation_type": "EXCLUSIVE"
+                },
+                {
+                    "_id": "672fa7dd0e5f315f0e8c0a4f",
+                    "name": "No class",
+                    "label_ids": [
+                        "672f671cf838622aa2534ac3"
+                    ],
+                    "relation_type": "EMPTY_LABEL"
+                }
+            ],
+            "all_labels": {
+                "672f671cf838622aa2534ab7": {
+                    "_id": "672f671cf838622aa2534ab7",
+                    "name": "door",
+                    "color": {
+                        "red": 204,
+                        "green": 148,
+                        "blue": 218,
+                        "alpha": 255
+                    },
+                    "hotkey": "",
+                    "domain": "CLASSIFICATION",
+                    "creation_date": "2024-11-09T18:20:13.791000",
+                    "is_empty": false,
+                    "is_anomalous": false
+                },
+                "672f671cf838622aa2534ab8": {
+                    "_id": "672f671cf838622aa2534ab8",
+                    "name": "steps",
+                    "color": {
+                        "red": 37,
+                        "green": 161,
+                        "blue": 142,
+                        "alpha": 255
+                    },
+                    "hotkey": "",
+                    "domain": "CLASSIFICATION",
+                    "creation_date": "2024-11-09T18:20:13.791000",
+                    "is_empty": false,
+                    "is_anomalous": false
+                },
+                "672f671cf838622aa2534ac3": {
+                    "_id": "672f671cf838622aa2534ac3",
+                    "name": "No class",
+                    "color": {
+                        "red": 0,
+                        "green": 0,
+                        "blue": 0,
+                        "alpha": 255
+                    },
+                    "hotkey": "",
+                    "domain": "CLASSIFICATION",
+                    "creation_date": "2024-11-09T18:20:13.791000",
+                    "is_empty": true,
+                    "is_anomalous": false
+                },
+                "672f8244f838622aa2534b41": {
+                    "_id": "672f8244f838622aa2534b41",
+                    "name": "walls",
+                    "color": {
+                        "red": 237,
+                        "green": 178,
+                        "blue": 0,
+                        "alpha": 255
+                    },
+                    "hotkey": "",
+                    "domain": "CLASSIFICATION",
+                    "creation_date": "2024-11-09T18:20:13.791000",
+                    "is_empty": false,
+                    "is_anomalous": false
+                }
+            }
+        }
+    }
+}

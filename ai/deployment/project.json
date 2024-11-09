@@ -1,0 +1,151 @@
+{
+   "id": "672f671cf838622aa2534aaf",
+   "name": "Helping People Travel Through Their Time",
+   "creation_time": "2024-11-09T13:43:56.717000+00:00",
+   "creator_id": "7f617e8a-fdf7-469d-9465-5acbe56dc40e",
+   "pipeline": {
+      "tasks": [
+         {
+            "id": "672f671cf838622aa2534ab0",
+            "title": "Dataset",
+            "task_type": "dataset"
+         },
+         {
+            "id": "672f671cf838622aa2534ab2",
+            "title": "Detection",
+            "task_type": "detection",
+            "labels": [
+               {
+                  "id": "672f671cf838622aa2534ab4",
+                  "name": "object",
+                  "is_anomalous": false,
+                  "color": "#edb200ff",
+                  "hotkey": "",
+                  "is_empty": false,
+                  "group": "Detection labels",
+                  "parent_id": null
+               },
+               {
+                  "id": "672f671cf838622aa2534abe",
+                  "name": "No object",
+                  "is_anomalous": false,
+                  "color": "#000000ff",
+                  "hotkey": "",
+                  "is_empty": true,
+                  "group": "No object",
+                  "parent_id": null
+               }
+            ],
+            "label_schema_id": "672f8244f838622aa2534b45"
+         },
+         {
+            "id": "672f671cf838622aa2534ab9",
+            "title": "Crop",
+            "task_type": "crop"
+         },
+         {
+            "id": "672f671cf838622aa2534ab5",
+            "title": "Classification",
+            "task_type": "classification",
+            "labels": [
+               {
+                  "id": "672f671cf838622aa2534ab7",
+                  "name": "door",
+                  "is_anomalous": false,
+                  "color": "#cc94daff",
+                  "hotkey": "",
+                  "is_empty": false,
+                  "group": "Detection labels___obstructions",
+                  "parent_id": "672f671cf838622aa2534ab4"
+               },
+               {
+                  "id": "672f671cf838622aa2534ab8",
+                  "name": "steps",
+                  "is_anomalous": false,
+                  "color": "#25a18eff",
+                  "hotkey": "",
+                  "is_empty": false,
+                  "group": "Detection labels___obstacles",
+                  "parent_id": "672f671cf838622aa2534ab4"
+               },
+               {
+                  "id": "672f671cf838622aa2534ac3",
+                  "name": "No class",
+                  "is_anomalous": false,
+                  "color": "#000000ff",
+                  "hotkey": "",
+                  "is_empty": true,
+                  "group": "No class",
+                  "parent_id": "672f671cf838622aa2534ab4"
+               },
+               {
+                  "id": "672f8244f838622aa2534b41",
+                  "name": "walls",
+                  "is_anomalous": false,
+                  "color": "#edb200ff",
+                  "hotkey": "",
+                  "is_empty": false,
+                  "group": "Detection labels___obstructions",
+                  "parent_id": "672f671cf838622aa2534ab4"
+               }
+            ],
+            "label_schema_id": "672f8244f838622aa2534b49"
+         }
+      ],
+      "connections": [
+         {
+            "from": "672f671cf838622aa2534ab0",
+            "to": "672f671cf838622aa2534ab2"
+         },
+         {
+            "from": "672f671cf838622aa2534ab2",
+            "to": "672f671cf838622aa2534ab9"
+         },
+         {
+            "from": "672f671cf838622aa2534ab9",
+            "to": "672f671cf838622aa2534ab5"
+         }
+      ]
+   },
+   "thumbnail": "/api/v1/organizations/39be6ec0-b9fb-4da1-a257-57b0327f681c/workspaces/972ea0e4-9eed-4249-b347-fcd055e3c77a/projects/672f671cf838622aa2534aaf/thumbnail",
+   "performance": {
+      "score": 0.6622340425531915,
+      "task_performances": [
+         {
+            "task_id": "672f671cf838622aa2534ab2",
+            "score": {
+               "value": 0.75,
+               "metric_type": "f-measure"
+            }
+         },
+         {
+            "task_id": "672f671cf838622aa2534ab5",
+            "score": {
+               "value": 0.574468085106383,
+               "metric_type": "Accuracy"
+            }
+         }
+      ]
+   },
+   "storage_info": {},
+   "datasets": [
+      {
+         "id": "672f671cf838622aa2534abb",
+         "name": "Dataset",
+         "use_for_training": true,
+         "creation_time": "2024-11-09T13:43:56.712000+00:00"
+      },
+      {
+         "id": "672f9c832faf63f637b33336",
+         "name": "Testing set 1",
+         "use_for_training": false,
+         "creation_time": "2024-11-09T17:31:47.467000+00:00"
+      },
+      {
+         "id": "672faa762faf63f637b333af",
+         "name": "syaz's test",
+         "use_for_training": false,
+         "creation_time": "2024-11-09T18:31:18.271000+00:00"
+      }
+   ]
+}
