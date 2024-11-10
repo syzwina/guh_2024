@@ -19,7 +19,7 @@ const ImageUpload = () => {
     formData.append('image', selectedImage);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/upload/', formData, {
+      const response = await axios.post('http://localhost:8000/api/images/', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setUploadStatus('Image uploaded successfully!');
