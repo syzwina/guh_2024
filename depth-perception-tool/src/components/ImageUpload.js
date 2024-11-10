@@ -22,7 +22,13 @@ const ImageUpload = () => {
       const response = await axios.post('http://localhost:8000/api/images/', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
-      setUploadStatus('Image uploaded successfully!');
+      // Assuming 'labels' is an array in the response
+      const detectedLabels = response.data.labels;
+      if (detectedLabels && detectedLabels.length > 0) {
+        setUploadStatus(`Detected labels: ${detectedLabels.join(', ')}`);
+      } else {
+        setUploadStatus('No labels detected.');
+      }
     } catch (error) {
       console.error('Error uploading image:', error);
       setUploadStatus('Failed to upload image.');
