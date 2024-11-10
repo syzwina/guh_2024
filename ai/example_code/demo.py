@@ -14,14 +14,14 @@
 
 import cv2
 from geti_sdk.deployment import Deployment
-from geti_sdk.utils import show_image_with_annotation_scene
+from geti_sdk.utils import show_image_with_annotation_scene, generate_segmentation_labels
 
 if __name__ == "__main__":
     # Step 1: Load the deployment
     deployment = Deployment.from_folder("../deployment")
 
     # Step 2: Load the sample image
-    image = cv2.imread("../images/small_door.jpg")
+    image = cv2.imread("../images/multiple_doors.jpg")
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     # Step 3: Send inference model(s) to CPU
@@ -32,3 +32,11 @@ if __name__ == "__main__":
 
     # Step 5: Visualization
     show_image_with_annotation_scene(image_rgb, prediction)
+
+    # print(prediction)
+
+    # Extracting and printing all label names from the prediction object
+    for annotation in prediction.annotations:
+        for label in annotation.labels:
+            print(label.name)
+
