@@ -39,6 +39,8 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  justify-items: center;
+  align-items: start;
 }
 
 /* Control Panel Styles */
@@ -50,6 +52,7 @@ h1 {
   flex-direction: column;
   gap: 1rem;
   color: #e0e0e0;
+  text-align: center;
 }
 
 button {
@@ -79,17 +82,37 @@ button.stop {
 
 /* Accessibility Settings Styles */
 .AccessibilitySettings {
-  background: rgba(255, 255, 255, 0.1);
+  background: #f5f5dc; /* Beige background */
   padding: 1.5rem;
   border-radius: 8px;
-  color: #000000; /* Set text color to black */
-  text-align: left;
-  width: 100%;
+  color: #000000; /* Black text */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: flex-start;
 }
 
-.AccessibilitySettings label,
-.AccessibilitySettings select {
-  color: #000000; /* Set label and select text to black */
+.AccessibilitySettings h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.AccessibilitySettings label {
+  font-size: 0.9rem;
+}
+
+/* Dynamic text size classes */
+.small-text {
+  font-size: 0.9rem;
+}
+
+.medium-text {
+  font-size: 1rem;
+}
+
+.large-text {
+  font-size: 1.2rem;
 }
 
 /* Object Alert Styles */
@@ -115,22 +138,23 @@ button.stop {
   align-items: center;
 }
 
-.image-upload input[type="file"] {
+.image-upload label {
   font-size: 1rem;
   color: #ffffff;
 }
 
-.image-upload input[type="file"]::-webkit-file-upload-button {
-  background-color: #4caf50;
-  border: none;
-  padding: 0.5rem 1rem;
-  color: #ffffff;
-  border-radius: 5px;
-  cursor: pointer;
+.image-upload .file-upload-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-.image-upload input[type="file"]::-webkit-file-upload-button:hover {
-  background-color: #3e8e41;
+.image-upload input[type="file"] {
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: #4caf50;
+  border-radius: 5px;
+  color: #ffffff;
 }
 
 .upload-button {
@@ -141,7 +165,7 @@ button.stop {
   cursor: pointer;
   border: none;
   transition: background-color 0.3s ease;
-  max-width: 200px;
+  max-width: 150px;
   width: 100%;
 }
 

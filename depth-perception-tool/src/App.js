@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   const [alertMessage, setAlertMessage] = useState('');
-  const [textSize, setTextSize] = useState('medium');
+  const [textSize, setTextSize] = useState('medium-text'); // default to medium
 
   const handleStart = () => {
     setAlertMessage('Object detected: Door nearby.');
@@ -19,7 +19,7 @@ function App() {
   };
 
   const handleTextSizeChange = (size) => {
-    setTextSize(size);
+    setTextSize(`${size}-text`); // update to small-text, medium-text, or large-text
   };
 
   return (
